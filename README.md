@@ -66,7 +66,17 @@ Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 
 ### Conclusions
 
------------1qw12q
+* Loss started at 2.5 and steadily decreased over the training steps
+
+* Token Jaccard score of 0.418 shows that model captured partially correct themes, even if not an exact match
+
+* Precision and Recall were both around 0.202, showing moderate success in identifying correct symbolic themes from ground truth.
+
+* Embedding similarity was 0.678, suggesting that even when predictions weren’t textually identical, they were often semantically close in meaning
+
+* Theme embeddings (vector representations of predicted labels) showed most points clustering closely, indicating strong semantic agreement, with only a few notable outliers.
+
+**Overall, GPT-3.5-turbo was able to learn and replicate GPT-4.1-mini’s symbolic reasoning to a reasonable degree, especially in terms of general theme sentiment and meaning**
 
 #### **Model Deployment**
 
@@ -140,9 +150,7 @@ The list below follows the chronological order in which each component of the pr
 
 ## CITATIONS
 
-[1] --------
-
-[2] --------
+[1] Stöffelbauer, Andreas. “How Large Language Models Work. From Zero to ChatGPT.” *Data Science at Microsoft*, Medium, 24 Oct. 2023, https://medium.com/data-science-at-microsoft/how-large-language-models-work-91c362f5b78f. Accessed 28 Jul. 2025.
 
 
 
