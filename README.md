@@ -66,9 +66,16 @@ Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 
 ### Conclusions
 
+-----------1qw12q
+
 #### **Model Deployment**
 
-**WHAT THIS MEANS:** 
+*"Empty prayers, empty truth, empty faith. Dying hope, I no longer said His name. But He found me and said He loved me just the same because it was the day true love bloomed. No, it had always been that way."*
+
+* Fine-Tuned GPT-3.5-turbo Themes: ['emptiness', 'faith and doubt', 'hope and despair', 'love's persistence', 'truth and perception']
+* GPT-4.1-mini Themes: ['emptiness and despair', 'lost and found love', 'enduring faith', 'renewal and blooming', 'unspoken connection']
+
+**Human Analysis:** There are **several surface-level overlaps between the two sets of themes**, such as "emptiness", "faith", and "love", suggesting that the fine-tuned **GPT-3.5 model captured the core emotional threads of the poem.** However, **GPT-4.1-mini demonstrates a deeper interpretive ability**, identifying more nuanced concepts like "renewal and blooming" and "unspoken connection." In contrast, **GPT-3.5's themes are more literal and generalized**, such as "truth and perception" and "love’s persistence." **Overall, while GPT-3.5-turbo successfully learned to associate symbolic ideas with the text, GPT-4.1-mini appears more capable of abstract reasoning and subtle emotional inference.**
 
 ### Future Work
  
@@ -132,9 +139,9 @@ The list below follows the chronological order in which each component of the pr
 
 ## CITATIONS
 
-[1] 
+[1] --------
 
-[2] 
+[2] --------
 
 
 
