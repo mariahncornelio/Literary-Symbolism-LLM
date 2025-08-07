@@ -43,21 +43,27 @@ This project detects and classifies literary symbolism in user-submitted poems. 
   
 ### Training
 
-Model training was conducted locally on a custom-built **Windows PC equipped with an AMD Ryzen 7 7700X CPU, RTX 4060 GPU, and 64 GB of DDR5 RAM**, using Jupyter Notebook. Labeling took 20 minutes, fine-tuning the model took 1 hour, 30 minutes, and evaluation took 1 hour.
+Model training was conducted locally on a custom-built **Windows PC equipped with an AMD Ryzen 7 7700X CPU, RTX 4060 GPU, and 64 GB of DDR5 RAM**, using Jupyter Notebook. Labeling took 20 minutes, fine-tuning and evaluating the model both took 1 hour and 30 minutes.
 
-**Challenges:**
+**Challenges:** This was my first time working with LLMs, so there was a learning curve in understanding how to use the OpenAI API, manage prompts, handle responses, and navigate the fine-tuning process; including the cost and rate limits. Additionally, I initially forgot to separate a training set before labeling the full dataset, which turned the evaluation into more of a post-hoc analysis rather than a clean train/test split (which is still okay if comparing outputs.
 
 ### GPT-3.5-Turbo Model Performance
-<img width="852" height="547" alt="image" src="https://github.com/user-attachments/assets/80535aaa-3a93-4d29-be35-c417d895bf9d" />
-
 Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 
-<img width="543" height="80" alt="Screenshot 2025-08-06 at 7 26 37 PM" src="https://github.com/user-attachments/assets/0c803bf1-730e-48d0-b735-bfe0c0b848b6" />
+<img width="852" height="547" alt="image" src="https://github.com/user-attachments/assets/80535aaa-3a93-4d29-be35-c417d895bf9d" />
 
-* **Exact Jaccard (Strict):**
-* **Token Jaccard (Lenient):**
-* **Precision/Recall:**
-* **Embedding/Cosine Similarity:**
+
+**Evaluation Metrics Used:**
+* Exact Jaccard (Strict): Measures exact theme sets matched
+* Token Jaccard (Forgiving): Measures partial overlap
+* Precision/Recall: Of the predicted themes, how many were correct? Of the true themes, how many were successfully predicted?
+* Embedding/Cosine Similarity: Compares semantic similarity (meaning)
+
+**Evaluation Summary Table:**
+
+<img width="519" height="53" alt="Screenshot 2025-08-06 at 8 08 53 PM" src="https://github.com/user-attachments/assets/e6a95610-4bc4-492e-a0c7-7e01c8ddfe0f" />
+
+
 
 ### Conclusions
 
@@ -100,7 +106,7 @@ The list below follows the chronological order in which each component of the pr
 * matplotlib
 * from collections import defaultdict
 * sklearn
-  * precision_score, recall_score
+  * precision_score, recall_score, PCA
 * ast
 
 ### Data
