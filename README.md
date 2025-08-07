@@ -4,7 +4,7 @@
 
 This repository fine-tunes GPT-3.5 on 979 user-submitted poems from r/OCPoem to detect literary symbolism using GPT-4.1-generated ground truth.
 
-* **IMPORTANT:** This dataset was created using © Reddit API and OpenAI API. The original poem dataset is not distributed here to comply with terms of service. You must obtain your own API keys for both services and follow the provided pipelines in order to replicate
+* **IMPORTANT:** This dataset was created using © Reddit API and OpenAI API. The original poem dataset is not distributed here to comply with terms of service. You must obtain your own API keys for both services and follow the provided pipelines in order to replicate. **This project costs $7.12**
 
 ## OVERVIEW
 
@@ -24,11 +24,9 @@ This project detects and classifies literary symbolism in user-submitted poems. 
    
 #### Compiling Data and Pre-processing
 
-* **Data Collection:**
-    * Reddit API: 
+* **Data Collection** using Reddit API to scrape poems from r/OCPoem
 * **Data Cleaning:**
     * Manual Filtering:
-* **Data Labeling:**
-    * OpenAI API:
+* **Data Labeling** using OpenAI API to label poem dataset with GPT-4.1-mini
 
 
