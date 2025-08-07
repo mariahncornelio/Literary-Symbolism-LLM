@@ -82,6 +82,7 @@ Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 * **Increase dataset size** to support deeper and more expressive models
 * **No post-hoc evaluation** to test generalization on unseen data. Next time, split the data beforehand into train_df and eval_df, fine-tune using only train_df, and then evaluating on eval_df
 
+## HOW TO REPRODUCE RESULTS
 ### Overview of Files in Repository
 
 The list below follows the chronological order in which each component of the project was developed:
