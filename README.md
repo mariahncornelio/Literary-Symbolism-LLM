@@ -4,7 +4,7 @@
 
 This repository fine-tunes GPT-3.5 on 979 user-submitted poems from r/OCPoem to detect literary symbolism using GPT-4.1-generated ground truth.
 
-* **IMPORTANT:** This dataset was created using © Reddit API and OpenAI API. The original poem dataset is not distributed here to comply with terms of service. You must obtain your own API keys for both services and follow the provided pipelines in order to replicate. **This project costs $7.12**
+* **IMPORTANT:** This dataset was created using © Reddit API and OpenAI API. The original poem dataset is not distributed here to comply with terms of service. You must obtain your own API keys for both services and follow the provided pipelines in order to replicate. **This project cost $7.12**
 
 ## OVERVIEW
 
@@ -45,13 +45,16 @@ This project detects and classifies literary symbolism in user-submitted poems. 
 
 Model training was conducted locally on a custom-built **Windows PC equipped with an AMD Ryzen 7 7700X CPU, RTX 4060 GPU, and 64 GB of DDR5 RAM**, using Jupyter Notebook. Labeling took 20 minutes, fine-tuning and evaluating the model both took 1 hour and 30 minutes.
 
-**Challenges:** This was my first time working with LLMs, so there was a learning curve in understanding how to use the OpenAI API, manage prompts, handle responses, and navigate the fine-tuning process; including the cost and rate limits. Additionally, I initially forgot to separate a training set before labeling the full dataset, which turned the evaluation into more of a post-hoc analysis rather than a clean train/test split (which is still okay if comparing outputs.
+**Challenges:** This was my first time working with LLMs, so there was a learning curve in understanding how to use the OpenAI API, manage prompts, handle responses, and navigate the fine-tuning process; including the cost and rate limits. Additionally, I initially forgot to separate a training set before labeling the full dataset, which turned the evaluation into more of a post-hoc analysis rather than a clean train/test split (which is still okay if low-stakes)
 
 ### GPT-3.5-Turbo Model Performance
 Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 
 <img width="852" height="547" alt="image" src="https://github.com/user-attachments/assets/80535aaa-3a93-4d29-be35-c417d895bf9d" />
 
+**Evaluation Summary Table:**
+
+<img width="519" height="53" alt="Screenshot 2025-08-06 at 8 08 53 PM" src="https://github.com/user-attachments/assets/e6a95610-4bc4-492e-a0c7-7e01c8ddfe0f" />
 
 **Evaluation Metrics Used:**
 * Exact Jaccard (Strict): Measures exact theme sets matched
@@ -59,11 +62,7 @@ Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 * Precision/Recall: Of the predicted themes, how many were correct? Of the true themes, how many were successfully predicted?
 * Embedding/Cosine Similarity: Compares semantic similarity (meaning)
 
-**Evaluation Summary Table:**
-
-<img width="519" height="53" alt="Screenshot 2025-08-06 at 8 08 53 PM" src="https://github.com/user-attachments/assets/e6a95610-4bc4-492e-a0c7-7e01c8ddfe0f" />
-
-
+<img width="989" height="690" alt="image" src="https://github.com/user-attachments/assets/c28eba34-f6d9-40a1-a0ff-9a59e1396a28" />
 
 ### Conclusions
 
@@ -81,12 +80,12 @@ Loss was grouped by 50 steps in order to reduce crowding. 2937 steps total.
 The list below follows the chronological order in which each component of the project was developed:
 
 * **LLM_Proposal_Cornelio:** This project's proposal which includes background information and an abstract
-* **create_poem_dataset.ipynb:** 
-    * **Output Files:**
-* **clean_dataset.ipynb:** 
-* **data_labeling.ipynb:** 
-* **train_and_fine_tune.ipynb:**
-* **evaluation_and_deployment.ipynb:**
+* **create_poem_dataset.ipynb:** Create poem dataset using Reddit API
+    * **Output Files:** All files minus original poem datasets (to respect terms of service)
+* **clean_dataset.ipynb:** Clean and pre-process poem dataset before labeling
+* **data_labeling.ipynb:** Label poem dataset using GPT-4.1-mini for baseline
+* **train_and_fine_tune.ipynb:** Train and fine tune using GPT-3.5-turbo
+* **evaluation_and_deployment.ipynb:** Evaluation and deployment of fine tuned model
 
 ### Software Setup
 
